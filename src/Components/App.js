@@ -4,12 +4,12 @@ import ContactForm from "./ContactForm/ContactForm";
 import Filter from "./Filter/Filter";
 import ContactList from "./ContactList/ContactList";
 
+const KEY = "Contacts";
+
 const App = () => {
 	const [contacts, setContacts] = useState([]);
 	const [filter, setFilter] = useState("");
 	const isMounted = useRef(false);
-
-	const KEY = "Contacts";
 
 	useEffect(() => {
 		const savedContacts = JSON.parse(localStorage.getItem(KEY));
